@@ -1,15 +1,15 @@
 # DGLAB蓝牙控制器MCP (DG-LAB MCP Server)
-基于 DG-LAB V3 协议的郊狼设备蓝牙控制系统，支持 MCP (Model Context Protocol) 接口。
+基于 DG-LAB V3 协议的脉冲器设备蓝牙控制系统，支持 MCP (Model Context Protocol) 接口。
 
 ## 项目概述
-本项目是一个用 Go 语言开发的郊狼设备控制器，通过蓝牙连接郊狼设备，提供 HTTP API 和 MCP 协议接口，支持设置通道强度、波形切换等功能。
+本项目是一个用 Go 语言开发的脉冲器设备控制器，通过蓝牙连接脉冲器设备，提供 HTTP API 和 MCP 协议接口，支持设置通道强度、波形切换等功能。
 
 <img width="1920" height="1040" alt="Snipaste_2025-08-19_16-19-27" src="https://github.com/user-attachments/assets/8966cdfc-7156-4652-ae22-661dc61d4cda" />
 <img width="1508" height="920" alt="Snipaste_2025-08-19_16-23-58" src="https://github.com/user-attachments/assets/92b5696f-607c-4f62-a110-1079f1ac10f3" />
 <img width="1404" height="933" alt="Snipaste_2025-08-19_16-26-42" src="https://github.com/user-attachments/assets/37ba464f-4413-4aeb-9f26-57c11aa7431a" />
 
 ## 功能特性
-- 🔗 蓝牙连接 : 自动扫描并连接郊狼设备
+- 🔗 蓝牙连接 : 自动扫描并连接脉冲器设备
 - ⚡ 强度控制 : 支持 A/B 双通道强度设置 (0-200)
 - 🌊 波形管理 : 内置多种波形模式（呼吸、潮汐、连击等）
 - 🔧 MCP 协议 : 支持 Model Context Protocol 接口
@@ -42,7 +42,7 @@
 - Go 1.24.1+
 - Windows/Linux/macOS
 - 蓝牙适配器
-- 郊狼设备 (脉冲主机 3.0)
+- 脉冲器设备 (脉冲主机 3.0)
 ### 安装依赖
 ```
 go mod download
@@ -74,7 +74,7 @@ go run main.go
 程序启动后会：
 
 1. 1.
-   自动扫描并连接郊狼设备
+   自动扫描并连接脉冲器设备
 2. 2.
    启动 HTTP 服务器 (端口 8080)
 3. 3.
