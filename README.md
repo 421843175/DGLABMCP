@@ -96,8 +96,8 @@ curl -X POST http://localhost:8080/api/mcp \
       }
     }
   }'
-``` 获取设备状态
-```
+ 获取设备状态
+
 curl -X POST http://localhost:8080/api/mcp \
   -H "Content-Type: application/json" \
   -d '{
@@ -109,8 +109,8 @@ curl -X POST http://localhost:8080/api/mcp \
       "arguments": {}
     }
   }'
-``` 设置波形
-```
+设置波形
+
 curl -X POST http://localhost:8080/api/mcp \
   -H "Content-Type: application/json" \
   -d '{
