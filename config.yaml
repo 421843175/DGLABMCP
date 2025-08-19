@@ -1,0 +1,32 @@
+# 郊狼蓝牙控制器配置文件
+bluetooth:
+  scan_timeout: 30                                           # 扫描超时时间(秒)
+  device_names:                                              # 目标设备名称列表
+    - "47L121000"  # 脉冲主机 3.0
+    - "47L120100"  # 无线传感器
+  service_uuid: "0000180C-0000-1000-8000-00805f9b34fb"      # 服务UUID
+
+# 服务 UUID	特性 UUID	属性	名称	大小(BYTE)	说明
+#   0x180C	0x150A	写	WRITE	最长 20 字节	所有的指令都在该特性输入
+# 0x180C	0x150B	通知	NOTIFY	最长 20 字节	所有的回应消息都在该特性返回
+# 0x180A	0x1500	读/通知	READ/NOTIFY	1 字节	电量信息
+  # 基础 UUID：0000xxxx-0000-1000-8000-00805f9b34fb(将 xxxx 替换为服务/特性 UUID)
+
+  write_uuid: "0000150A-0000-1000-8000-00805f9b34fb"        # 写特性UUID
+  notify_uuid: "0000150B-0000-1000-8000-00805f9b34fb"       # 通知特性UUID
+  battery_uuid: "00001500-0000-1000-8000-00805f9b34fb"      # 电量特性UUID
+
+channels:
+  a_channel:
+    enabled: true          # 是否启用A通道
+    max_strength: 100      # A通道最大强度
+    default_strength: 0    # A通道默认强度
+  b_channel:
+    enabled: false         # 是否启用B通道
+    max_strength: 100      # B通道最大强度
+    default_strength: 0    # B通道默认强度
+
+pulses:
+  config_path: "pulses.yaml"    # 波形配置文件路径
+  default_pulse: "d6f83af0"     # 默认波形ID(呼吸)
+  update_interval: 100          # 波形更新间隔(ms)
