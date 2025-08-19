@@ -150,7 +150,7 @@ curl -X POST http://localhost:8080/api/mcp \
   pulse_data:
     - "0D0D0D0D0F0F0F0F"
     # ... 更多波形数据
-
+```
 ### 内置波形
 - 呼吸 ( d6f83af0 ): 渐强渐弱的呼吸节奏
 - 潮汐 ( 7eae1e5f ): 如潮汐般的起伏波形
