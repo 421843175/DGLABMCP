@@ -4,6 +4,10 @@
 ## 项目概述
 本项目是一个用 Go 语言开发的郊狼设备控制器，通过蓝牙连接郊狼设备，提供 HTTP API 和 MCP 协议接口，支持设置通道强度、波形切换等功能。
 
+<img width="1920" height="1040" alt="Snipaste_2025-08-19_16-19-27" src="https://github.com/user-attachments/assets/8966cdfc-7156-4652-ae22-661dc61d4cda" />
+<img width="1508" height="920" alt="Snipaste_2025-08-19_16-23-58" src="https://github.com/user-attachments/assets/92b5696f-607c-4f62-a110-1079f1ac10f3" />
+<img width="1404" height="933" alt="Snipaste_2025-08-19_16-26-42" src="https://github.com/user-attachments/assets/37ba464f-4413-4aeb-9f26-57c11aa7431a" />
+
 ## 功能特性
 - 🔗 蓝牙连接 : 自动扫描并连接郊狼设备
 - ⚡ 强度控制 : 支持 A/B 双通道强度设置 (0-200)
@@ -146,7 +150,7 @@ curl -X POST http://localhost:8080/api/mcp \
   pulse_data:
     - "0D0D0D0D0F0F0F0F"
     # ... 更多波形数据
-```
+
 ### 内置波形
 - 呼吸 ( d6f83af0 ): 渐强渐弱的呼吸节奏
 - 潮汐 ( 7eae1e5f ): 如潮汐般的起伏波形
@@ -211,8 +215,5 @@ API 调用失败
 ## 贡献
 欢迎提交 Issue 和 Pull Request 来改进项目。
 
-<img width="1920" height="1040" alt="Snipaste_2025-08-19_16-19-27" src="https://github.com/user-attachments/assets/8966cdfc-7156-4652-ae22-661dc61d4cda" />
-<img width="1508" height="920" alt="Snipaste_2025-08-19_16-23-58" src="https://github.com/user-attachments/assets/92b5696f-607c-4f62-a110-1079f1ac10f3" />
-<img width="1404" height="933" alt="Snipaste_2025-08-19_16-26-42" src="https://github.com/user-attachments/assets/37ba464f-4413-4aeb-9f26-57c11aa7431a" />
 
 
